@@ -24,19 +24,4 @@ public class Main {
 
 	}
 
-	public static void ornek() {
-		Scanner scanner = new Scanner(System.in);
-
-		System.out.print("Fiyatı Giriniz : ");
-		double fiyat = scanner.nextInt();
-
-		double kdv = 0.18;
-		double kdvFiyat = kdv * fiyat;
-		double kdvLiFiyat = fiyat + kdvFiyat;
-
-		System.out.println("KDV'siz Fiyat : " + fiyat);
-		System.out.println("KDV'li Fiyat : " + kdvLiFiyat);
-		System.out.println("KDV Tutarı : " + kdv);
-	}
-
 }
