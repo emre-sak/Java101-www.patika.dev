@@ -1,4 +1,4 @@
-package ucakBiletFiyatHesapla;
+package ucakBiletiFiyatHesaplama;
 
 import java.util.Scanner;
 
@@ -8,8 +8,8 @@ public class Main {
 
 		Scanner scanner = new Scanner(System.in);
 
-		int indirim = 0;
-		int tutar = 0;
+		double indirim = 0;
+		double tutar = 0;
 
 		System.out.print("Mesafeyi KM türünden giriniz : ");
 		int km = scanner.nextInt();
@@ -20,22 +20,22 @@ public class Main {
 		System.out.print("Yolculuk türünü giriniz (1 => Tek yön, 2 => Gidiş dönüş) : ");
 		int yolculukTipi = scanner.nextInt();
 
-		int normalTutar = (int) (km * 0.10);
+		double normalTutar = km * 0.10;
 		
 		if (!(km < 0 || yas < 0)) {
 			
 			if (yas < 12) {
-				indirim = (int) (normalTutar * 0.5);
+				indirim = normalTutar * 0.5;
 			} else if (yas >= 12 && yas <= 24) {
-				indirim = (int) (normalTutar * 0.1);
+				indirim = normalTutar * 0.1;
 			} else if (yas > 65) {
-				indirim = (int) (normalTutar * 0.3);
+				indirim = normalTutar * 0.3;
 			}
 			
 			tutar = normalTutar - indirim;
 			
 			if(yolculukTipi == 2) {
-				indirim = (int) (tutar * 0.2);
+				indirim = tutar * 0.2;
 				tutar = (tutar - indirim) * 2;
 			}
 			
