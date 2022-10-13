@@ -35,6 +35,8 @@ public class Main {
 			}else {
 				System.out.println("c < b < a");
 			}
+		}else {
+			System.out.println("Sayılar eşittir.");
 		}
 		
 
